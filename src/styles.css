@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";  
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+a, a:hover {
+    text-decoration: none;
+}
+a:hover, a.is-active {
+    background-color: #f4f4f4;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.p-flex {
+    display: flex;
+}
+.p-flex-align-center {
+    align-items: center;
+}
+.p-flex-jc-sb {
+    justify-content: space-between;
+}
+
+
+.p-wrapper {
+    position: relative;
+}
+
+.p-wrapper::before {
+    content: '';
+    background: #f4f4f4;
+    height: 100vh;
+    width: 25vw;
+    position: absolute;
+    z-index: -1;
+}
