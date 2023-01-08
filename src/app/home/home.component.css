@@ -26,4 +26,22 @@
     padding-bottom: 4px;
     padding-left: 7px;
   }
-  
+img {
+  height: 25px;
+  width: 25px;
+}
+.social-link {
+  margin-left: 25px;
+
+}
+.contact-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+.info-content {
+  align-items: center;
+}
+.contact-link {
+  color: black;
+  margin-left: 10px;
+}
