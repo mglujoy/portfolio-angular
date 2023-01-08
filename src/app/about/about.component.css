@@ -1,0 +1,29 @@
+.about .article-title { margin-bottom: 15px; }
+
+.about-text p { margin-bottom: 15px; }
+
+.service { margin-bottom: 35px; }
+
+.service-title { margin-bottom: 20px; }
+
+.service-list {
+  display: grid;
+
+
+}
+
+.service-item {
+  position: relative;
+
+  padding: 20px;
+  border-radius: 14px;
+
+  z-index: 1;
+}
+.service-icon-box { margin-bottom: 10px; }
+
+.service-icon-box img { margin: auto; }
+
+.service-content-box { text-align: center; }
+
+.service-item-title { margin-bottom: 7px; }

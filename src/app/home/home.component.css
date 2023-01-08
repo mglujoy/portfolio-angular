@@ -6,3 +6,24 @@
     background-position: top;
     background-repeat: no-repeat;
 }
+.sidebar {
+    margin-bottom: 15px;
+    
+    overflow: hidden;
+  }
+  .sidebar-info {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+  }
+  .social-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+    padding-bottom: 4px;
+    padding-left: 7px;
+  }
+  

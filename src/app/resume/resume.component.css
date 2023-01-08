@@ -1,0 +1,107 @@
+.article-title { margin-bottom: 30px; }
+
+.timeline { margin-bottom: 30px; }
+
+.timeline .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.timeline-list {
+
+  margin-left: 45px;
+}
+
+.timeline-item { position: relative; }
+
+.timeline-item:not(:last-child) { margin-bottom: 20px; }
+
+.timeline-item-title {
+
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.timeline-list span {
+  line-height: 1.6;
+}
+
+.timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -30px;
+  width: 1px;
+  height: calc(100% + 50px);
+
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  height: 6px;
+  width: 6px;
+
+  border-radius: 50%;
+
+}
+
+.timeline-text {
+  line-height: 1.6;
+}
+
+
+/**
+ * skills 
+ */
+
+.skills-title { margin-bottom: 20px; }
+
+.skills-list { padding: 20px; }
+
+
+.skills-item:not(:last-child) { margin-bottom: 15px; }
+
+.skill .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+
+.skill-progress-bg {
+
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+}
+
+.skill-progress-fill {
+
+  height: 100%;
+  border-radius: inherit;
+}
+
+
+.clients { margin-bottom: 15px; }
+
+.clients-list {
+  
+  margin: 0 -15px;
+  padding: 25px;
+  padding-bottom: 25px;
+}
+
+.clients-item {
+  min-width: 50%;
+
+}
+
+.clients-item img {
+  width: 100%;
+}
