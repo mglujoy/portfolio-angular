@@ -12,4 +12,7 @@ export class PortfolioService {
   getData (): Observable<any> {
     return this.http.get('../../assets/data/machines.json')
   }
+  getHomeInfo (): Observable<any> {
+    return this.http.get('../../assets/data/homeInfo.json')
+  }
 }
