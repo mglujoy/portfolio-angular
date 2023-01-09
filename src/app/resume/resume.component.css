@@ -28,28 +28,6 @@
   line-height: 1.6;
 }
 
-.timeline-item:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: -30px;
-  width: 1px;
-  height: calc(100% + 50px);
-
-}
-
-.timeline-item::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -33px;
-  height: 6px;
-  width: 6px;
-
-  border-radius: 50%;
-
-}
-
 .timeline-text {
   line-height: 1.6;
 }

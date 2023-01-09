@@ -1,0 +1,38 @@
+[
+    {
+        "name": "shoppy",
+        "type": "SQLi",
+        "port": 22,
+        "completed": true,
+        "date": "17/10/2022",
+        "user.txt": "820d0183a53976a2ef36d83b36906123",
+        "root.txt": "138b2465c305a1d6bf88c49d1c86cedd"
+    },
+    {
+        "name": "redpanda",
+        "type": "java rce",
+        "port": 8000,
+        "completed": false,
+        "date": "17/10/2022",
+        "user.txt": "a351d9a7480f9dedfbbfefb5b9c79dc8",
+        "root.txt": null
+    },
+    {
+        "name": "precious",
+        "type": "python reverse shell",
+        "port": 22,
+        "completed": true,
+        "date": "17/10/2022",
+        "user.txt": "9bc8fac2b5d3dbfa223ad5e3dd8595fc",
+        "root.txt": "9796283f215f4a473891950e436fa304"
+    },
+    {
+        "name": "photobomb",
+        "type": "http reversse shell",
+        "port": 80,
+        "completed": true,
+        "date": "17/10/2022",
+        "user.txt": null,
+        "root.txt": null
+    }
+    ]

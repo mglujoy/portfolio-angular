@@ -1,5 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.css";  
 
+.apbanner {
+    background-color: #eae6e6;
+    margin-left: -160px;
+    margin-top: -30px;
+    width: 20%;
+    border-radius: 14px;
+}
 body {
     margin: 0;
     padding: 0;
@@ -103,7 +110,6 @@ article {
     padding-top: 45px;
     
   
-    cursor: pointer;
     z-index: 1;
   }
   
