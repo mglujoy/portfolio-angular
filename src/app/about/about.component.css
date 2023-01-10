@@ -14,16 +14,8 @@
 
 .service-item {
   position: relative;
-
+  display: flex;
   padding: 20px;
   border-radius: 14px;
-
   z-index: 1;
 }
-.service-icon-box { margin-bottom: 10px; }
-
-.service-icon-box img { margin: auto; }
-
-.service-content-box { text-align: center; }
-
-.service-item-title { margin-bottom: 7px; }

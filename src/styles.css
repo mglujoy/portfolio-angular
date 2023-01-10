@@ -19,7 +19,7 @@ a, a:hover {
     text-decoration: none;
 }
 a:hover, a.is-active {
-    background-color: #f4f4f4;
+    background-color: #eae6e6;
 }
 li { list-style: none; }
 ul {
@@ -55,12 +55,13 @@ input, textarea {
 
 .p-wrapper {
     position: relative;
+    height: 100%;
 }
 
 .p-wrapper::before {
     content: '';
-    background: #f4f4f4;
-    height: 100%;
+    background: #eae6e6;
+    height: 150%;
     width: 25%;
     position: absolute;
     z-index: -1;
