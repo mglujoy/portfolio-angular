@@ -13,6 +13,9 @@
 
   margin-left: 45px;
 }
+.progress {
+  margin-left: 20px;
+} 
 
 .timeline-item { position: relative; }
 
