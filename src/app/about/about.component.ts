@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { PortfolioService } from '../services/portfolio.service';
 
 export class AboutComponent {
   aboutInfo:any; 
+  saveData: any;
   constructor (private getData:PortfolioService) {}
 
   ngOnInit(): void {
@@ -19,5 +20,11 @@ export class AboutComponent {
   }
   onEdit(item:any)  {
 	  item.isEdit = true;
-}
+  }
+  update(item:'') {
+    this.saveData.saveAboutInfo().subscribe((data: any) => {
+      console.log(data)
+      this.saveData=data
+    })
+  }
 }

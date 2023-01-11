@@ -18,16 +18,13 @@
                       </div>
                       <div *ngIf = "aboutInfo.isEdit" class="p-flex">
                         <div class="service-icon-box">
-                          <button type="button" class="btn btn-secondary btn-sm" >Save</button>
+                          <button type="button" class="btn btn-secondary btn-sm" (click)="update(aboutInfo)" (click)="aboutInfo.isEdit = false">Save</button>
                         </div>
                         <div class="service-icon-box">
                           <button type="button" class="btn btn-dark btn-sm" (click)="aboutInfo.isEdit = false">Cancel</button>
                         </div>
                       </div>
                     </div>
-
-                           
-
                   </div>                       
                       <section class="about-text">
                         <div *ngIf = "aboutInfo.isEdit">
