@@ -1,5 +1,10 @@
 .about .article-title { margin-bottom: 15px; }
 
+.aboutHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
 .about-text p { margin-bottom: 15px; }
 
 .service { margin-bottom: 35px; }
@@ -8,8 +13,6 @@
 
 .service-list {
   display: grid;
-
-
 }
 
 .service-item {
@@ -25,4 +28,5 @@
 
 .service-icon-box {
   padding-left: 10px;
+  padding-bottom: 15px;
 }

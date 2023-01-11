@@ -1,0 +1,10 @@
+{
+    "aboutme" : "Clinical Pharmacist looking for a career change. Currently studying Cyber Security in Universidad de San Isidro and Web Development in Argentina Programa. In progress...",
+    "whatimdoing" : {
+        "item1" : "Cybersecurity",
+        "item2" : "Web Development",
+        "item3" : "Linux",
+        "item4" : "Networking"
+    },
+    "isEdit" : false
+}
