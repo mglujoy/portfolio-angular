@@ -19,3 +19,10 @@
   border-radius: 14px;
   z-index: 1;
 }
+.service-item-title {
+  padding-left: 10px;
+}
+
+.service-icon-box {
+  padding-left: 10px;
+}
