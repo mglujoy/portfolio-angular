@@ -19,6 +19,6 @@ export class PortfolioService {
     return this.http.get('../../assets/data/about.json')
   }
   saveAboutInfo (): Observable<any> {
-    return this.http.put('../../assets/data/about.json', '')
+    return this.http.post('../../assets/data/about.json', '')
   }
 }
