@@ -12,6 +12,7 @@ import { ReachComponent } from './reach/reach.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LoginComponent } from './login/login.component';
     AboutComponent,
     ResumeComponent,
     ReachComponent,
-    LoginComponent
+    LoginComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
