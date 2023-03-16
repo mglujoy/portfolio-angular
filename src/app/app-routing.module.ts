@@ -4,13 +4,19 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ReachComponent } from './reach/reach.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,  
+    component: LoginComponent,
+    pathMatch: "full"  
   }, 
+  {
+    path: 'home',
+    component: HomeComponent,  
+  },
   {
     path: 'about',
     component: AboutComponent,  
@@ -22,7 +28,11 @@ const routes: Routes = [
   {
     path: 'reach',
     component: ReachComponent,  
-  } 
+  },
+  {
+    path: 'login',
+    component: LoginComponent,  
+  }  
 ];
 
 @NgModule({

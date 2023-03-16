@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="p-profile"></div>
+        </div>
+        <div  class="col-sm-7">
+            <form [formGroup]="form" class="m-5">
+                <h1>Login</h1>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" formControlName="email" 
+                  [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid' : !Email?.errors && !Email?.touched}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <div *ngIf="Email?.errors && Email?.touched">
+                    <p *ngIf="Email?.hasError('required')" class="text-danger">
+                        Email is required
+                    </p>
+                    <p *ngIf="Email?.hasError('email')" class="text-danger">
+                        Email format invalid
+                    </p>
+                  </div>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" formControlName="password" 
+                  [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid' : !Password?.errors && !Password?.touched}" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <div *ngIf="Password?.errors && Password?.touched">
+                    <p *ngIf="Password?.hasError('required')" class="text-danger">
+                        Password is required
+                    </p>
+                    <p *ngIf="Password?.hasError('minlength')" class="text-danger">
+                        Password must be at least 8 characters
+                    </p>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>    
+</div>
+
