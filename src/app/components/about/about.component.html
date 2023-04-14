@@ -7,7 +7,7 @@
                     <header>
                       <h2 class="h2 article-title">About me</h2>
                     </header>     
-                    <div>
+                    <div *ngIf="IsAuthenticated">
                       <div *ngIf = "!aboutInfo.isEdit" class="p-flex">
                           <div class="service-icon-box">
                             <button type="button" class="btn btn-secondary btn-sm" (click) = "onEdit(aboutInfo)">Edit</button>

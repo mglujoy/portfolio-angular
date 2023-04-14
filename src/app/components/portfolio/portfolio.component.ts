@@ -1,7 +1,7 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { IUser } from '../models/iuser';
+import { IUser } from '../../models/iuser';
 import { Subscription } from 'rxjs';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -14,26 +14,16 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   subRef$: Subscription | undefined;
 
   constructor(
-    private http: HttpClient) {}
+    private dataService: DataService) {}
   ngOnDestroy(): void {
     if (this.subRef$) {
       this.subRef$.unsubscribe();
     }
   }
   ngOnInit(): void {
-    let httpHeaders: HttpHeaders = new HttpHeaders();
-    const token = sessionStorage.getItem('token');
-    console.log('get token', token);
-
-    httpHeaders = httpHeaders.append('Authorization', 'Bearer ' + token);
-
-    this.subRef$ = this.http.get<IUser>(
-      'http://localhost:8080/api/v1/demo-controller',
-      {
-        headers: httpHeaders,
-        observe: 'response'
-      }
-    ).subscribe((res: any) => {
+    const url = 'http://localhost:8080/api/v1/demo-controller';
+    this.subRef$ = this.dataService.get<IUser>(
+      url).subscribe((res: any) => {
       this.user = res.body;
     }, err => {
       console.log("Error", err);
