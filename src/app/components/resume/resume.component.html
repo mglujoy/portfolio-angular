@@ -1,5 +1,21 @@
 <section>
     <div class="container">
+      <div>
+        <div>
+          <a routerLink="resume-add" routerLinkActive="active">Add</a>
+        </div> 
+        <ul *ngFor = "let edu of education">
+          <li>
+            <div>
+              {{edu.duration}} {{edu.institution}} {{edu.name}}
+            </div>           
+          </li>
+          <!--
+          <button (click)="updateEducation(education.id)" class="btn btn-info">Edit</button>
+          <button (click)="deleteEducation(education.id)" class="btn btn-info" style="margin-left: 10px;">Delete</button>
+            -->
+        </ul>
+      </div>
         <div class="row">
             <div class="col-sm-5">
                 <div>
@@ -55,17 +71,7 @@
                             </div>
                           </li>
                         </ul>                                      
-                      </section>  
-                      <section>
-                        <h3 class="h3 clients-title">Machines</h3>              
-                        <ul class="skills-list content-card">
-                          <li *ngFor="let machine of machines">
-                            <p>{{machine.name}}</p>
-                            <p>{{machine.type}}</p>
-                            <p>{{machine.date}}</p>
-                          </li>
-                        </ul>
-                      </section>            
+                      </section>                             
                 </div>
             </div>
             <div class="col-sm-7">
@@ -78,7 +84,7 @@
                         <div class="icon-box">          
                         </div>
                         <h3 class="h3">Education</h3>
-                      </div>
+                      </div>                      
                       <ol class="timeline-list">
                         <li class="timeline-item">
                           <h4 class="h4 timeline-item-title">Universidad Nacional del Sur</h4>

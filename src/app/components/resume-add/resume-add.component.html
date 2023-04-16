@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="col-md-6 offset-md-3">
+        <h3 class="text-center">
+            Add Education
+        </h3>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Duration: </label>
+                <input type="text"
+                class="form-control"
+                id="duration"
+                [(ngModel)] = "education.duration"
+                name = "duration">
+            </div>
+            <div class="form-group">
+                <label>Institution: </label>
+                <input type="text"
+                class="form-control"
+                id="institution"
+                [(ngModel)] = "education.institution"
+                name = "institution">
+            </div>
+            <div class="form-group">
+                <label>Name: </label>
+                <input type="text"
+                class="form-control"
+                id="name"
+                [(ngModel)] = "education.name"
+                name = "name">
+            </div>
+            <button class="btn btn-success">Save</button>
+        </form>
+    </div>
+</div>

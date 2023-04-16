@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ResumeAddComponent } from './components/resume-add/resume-add.component';
+import { ResumeUpdateComponent } from './components/resume-update/resume-update.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     ResumeComponent,
     ReachComponent,
     LoginComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ResumeAddComponent,
+    ResumeUpdateComponent
   ],
   imports: [
     BrowserModule,
