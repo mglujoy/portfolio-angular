@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SecurityService } from './security.service';
 import { Observable } from 'rxjs';
+import { Education } from '../models/education';
 
 @Injectable({
   providedIn: 'root'
@@ -63,5 +64,17 @@ export class DataService {
     return httpHeaders;
   }
   
-
+  private crudUrl = 'http://localhost:8081/api/v1/education';
+  saveEducation(education: Education) : Observable<Object> {
+    return this.http.post(this.crudUrl, education);
+  }
+  getEducation(id: number, education: Education) : Observable<Object> {
+    return this.http.get<Education>(`${this.crudUrl}/${id}`);
+  }
+  putEducation(id: number, education: Education) : Observable<Object> {
+    return this.http.put<Education>(`${this.crudUrl}/${id}`, education);
+  }
+  deleteEducation(id: number) : Observable<Object> {
+    return this.http.get<Education>(`${this.crudUrl}/${id}`);
+  }  
 }
