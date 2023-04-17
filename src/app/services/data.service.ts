@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { SecurityService } from './security.service';
 import { Observable } from 'rxjs';
 import { Education } from '../models/education';
+import { Work } from '../models/work';
+import { Skills } from '../models/skills';
 
 @Injectable({
   providedIn: 'root'
@@ -75,6 +77,19 @@ export class DataService {
     return this.http.put<Education>(`${this.crudUrl}/${id}`, education);
   }
   deleteEducation(id: number) : Observable<Object> {
-    return this.http.get<Education>(`${this.crudUrl}/${id}`);
+    return this.http.delete<Education>(`${this.crudUrl}/${id}`);
   }  
-}
+
+  private crudUrlW = 'http://localhost:8081/api/v1/work';
+  saveWork(work: Work) : Observable<Object> {
+    return this.http.post(this.crudUrlW, work);
+  }
+  deleteWork(id: number) : Observable<Object>{
+    return this.http.delete<Work>(`${this.crudUrlW}/${id}`);
+  }
+
+  private crudUrlS = 'http://localhost:8081/api/v1/skills';
+  saveSkills(skills: Skills) : Observable<Object> {
+    return this.http.post(this.crudUrlS, skills);
+  }
+ }

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
@@ -8,6 +8,8 @@ import { LoginComponent } from './components/login/login.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ResumeAddComponent } from './components/resume-add/resume-add.component';
 import { ResumeUpdateComponent } from './components/resume-update/resume-update.component';
+import { ResumeAddWorkComponent } from './components/resume-add-work/resume-add-work.component';
+import { ResumeAddSkillsComponent } from './components/resume-add-skills/resume-add-skills.component';
 
 
 const routes: Routes = [
@@ -47,7 +49,15 @@ const routes: Routes = [
   {
     path: 'resume/resume-update',
     component: ResumeUpdateComponent
-  }   
+  },
+  {
+    path: 'resume/resume-add-work',
+    component: ResumeAddWorkComponent
+  },
+  {
+    path: 'resume/resume-add-skills',
+    component: ResumeAddSkillsComponent
+  }    
 ];
 
 @NgModule({

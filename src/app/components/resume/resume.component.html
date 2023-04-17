@@ -1,145 +1,73 @@
 <section>
     <div class="container">
-      <div>
+      <div>        
         <div>
-          <a routerLink="resume-add" routerLinkActive="active">Add</a>
+          <h2>Education</h2>
+          <button class="btn btn-dark btn-sm" routerLink="resume-add" routerLinkActive="active">Add New Education</button>
         </div> 
-        <ul *ngFor = "let edu of education">
-          <li>
-            <div>
-              {{edu.duration}} {{edu.institution}} {{edu.name}}
-            </div>           
-          </li>
+        <table class="table">
+          <thead class="table">
+            <tr>
+              <th>Duration</th>
+              <th>Institution</th>
+              <th>Degree</th>
+            </tr>
+          </thead>
+          <tbody *ngFor = "let edu of education">
+            <th>{{edu.duration}}</th>
+            <th>{{edu.institution}}</th>
+            <th>{{edu.name}}</th>
+          </tbody>
           <!--
-          <button (click)="updateEducation(education.id)" class="btn btn-info">Edit</button>
-          <button (click)="deleteEducation(education.id)" class="btn btn-info" style="margin-left: 10px;">Delete</button>
-            -->
-        </ul>
+          <button (click)= "updateEducation(education.id)" class="btn btn-info">Edit</button>
+          <button (click)= "deleteEducation(education.id)" class="btn btn-info" style="margin-left: 10px;">Delete</button>
+           -->
+        </table>
+        <div>
+          <h2>Work Experience</h2>
+          <button class="btn btn-dark btn-sm" routerLink="resume-add-work" routerLinkActive="active">Add New Work Experience</button>
+        </div> 
+        <table class="table">
+          <thead class="table">
+            <tr>
+              <th>Duration</th>
+              <th>Institution</th>
+              <th>Position</th>
+            </tr>
+          </thead>
+          <tbody *ngFor = "let w of work">
+            <th>{{w.duration}}</th>
+            <th>{{w.institution}}</th>
+            <th>{{w.name}}</th>
+          </tbody>
+          <!--
+          <button (click)= "deleteWork(work.id)" class="btn btn-info" style="margin-left: 10px;">Delete</button>
+           -->
+        </table>
+        
+        <div>
+          <h2>My Skills</h2>
+          <button class="btn btn-dark btn-sm" routerLink="resume-add-skills" routerLinkActive="active">Add New Skill</button>
+        </div> 
+        <table class="table">
+          <thead class="table">
+            <tr>
+              <th>Skill</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+          <tbody *ngFor = "let skill of skills">
+            <th>{{skill.name}}</th>
+            <th>{{skill.progress}}%</th>
+            <th><progress max="100"><span>{{skill.progress}}</span>%</progress></th>
+          </tbody>
+          <div class="progress" style="height: 20px; width: 75%;">
+            <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+          </div>
+          <!--
+          <button (click)= "deleteWork(work.id)" class="btn btn-info" style="margin-left: 10px;">Delete</button>
+           -->
+        </table>
       </div>
-        <div class="row">
-            <div class="col-sm-5">
-                <div>
-                    <section class="courses">
-                      <section class="skill">
-                        <h3 class="h3 skills-title">My skills</h3>
-                        <ul class="skills-list content-card">
-                          <li class="skills-item">
-                            <div class="title-wrapper">
-                              <h5 class="h5">Web Development</h5>
-                            </div>
-                          </li>
-                          <li class="skills-item">
-                            <div class="title-wrapper">
-                              <h5 class="h5">Cyber Security</h5>
-                            </div>
-                          </li>
-                          <li class="skills-item">
-                            <div class="title-wrapper">
-                              <h5 class="h5">Networking</h5>
-                            </div>
-                          </li>
-                          <li class="skills-item p-flex">
-                            <div class="title-wrapper">
-                              <h5 class="h5">English</h5>
-                            </div>
-                            <div class="progress" style="height: 20px; width: 75%;">
-                              <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
-                            </div>
-                          </li>
-                        </ul>
-                      </section>
-                        <h3 class="h3 clients-title">Courses</h3>              
-                        <ul class="skills-list content-card">
-                          <li class="skills-item">
-                            <div class="title-wrapper">
-                              <h5 class="h5">FreeCodeCamp</h5>
-                            </div>
-                          </li>
-                          <li class="skills-item">
-                            <div class="title-wrapper">
-                              <h5 class="h5">TryHackMe</h5>
-                            </div>
-                          </li>
-                          <li class="skills-item">
-                            <div class="title-wrapper">
-                              <h5 class="h5">Cisco</h5>
-                            </div>
-                          </li>
-                          <li class="skills-item">
-                            <div class="title-wrapper">
-                              <h5 class="h5">Argentina Programa</h5>
-                            </div>
-                          </li>
-                        </ul>                                      
-                      </section>                             
-                </div>
-            </div>
-            <div class="col-sm-7">
-                <article class="resume">
-                    <header>
-                      <h2 class="h2 article-title">Resume</h2>
-                    </header>
-                    <section class="timeline">
-                      <div class="title-wrapper">
-                        <div class="icon-box">          
-                        </div>
-                        <h3 class="h3">Education</h3>
-                      </div>                      
-                      <ol class="timeline-list">
-                        <li class="timeline-item">
-                          <h4 class="h4 timeline-item-title">Universidad Nacional del Sur</h4>
-                          <span>2005 — 2010</span>
-                          <p class="timeline-text">
-                            Pharmacist
-                          </p>
-                        </li>
-                        <li class="timeline-item">
-                          <h4 class="h4 timeline-item-title">Universidad de Buenos Aires</h4>
-                          <span>2015 — 2020</span>
-                          <p class="timeline-text">
-                            Sterilization Specialist
-                          </p>
-                        </li>
-                        <li class="timeline-item">
-                          <h4 class="h4 timeline-item-title">Universidad de San Isidro</h4>
-                          <span>2022 — Ongoing</span>
-                          <p class="timeline-text">
-                            Cyber Security Technician
-                          </p>
-                        </li>
-                      </ol>
-                    </section>
-                    <section class="timeline">
-                      <div class="title-wrapper">
-                        <div class="icon-box">          
-                        </div>
-                        <h3 class="h3">Experience</h3>
-                      </div>
-                      <ol class="timeline-list">
-                        <li class="timeline-item">
-                          <h4 class="h4 timeline-item-title">Pharmacist</h4>
-                          <span>2010 — Present</span>
-                          <p class="timeline-text">            
-                          </p>
-                        </li>
-                        <li class="timeline-item">
-                          <h4 class="h4 timeline-item-title">Cyber Security</h4>
-                          <span>2013 — 2015</span>
-                          <p class="timeline-text">
-                            No Experience
-                          </p>
-                        </li>
-                        <li class="timeline-item">
-                          <h4 class="h4 timeline-item-title">Web Developer</h4>
-                          <span>2010 — 2013</span>
-                          <p class="timeline-text">
-                            No Experience
-                          </p>
-                        </li>
-                      </ol>
-                    </section>                    
-                  </article>                
-            </div>
-        </div>
     </div>
 </section>

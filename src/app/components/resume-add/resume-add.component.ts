@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { error } from 'console';
 import { Subscription } from 'rxjs';
 import { Education } from 'src/app/models/education';
 import { DataService } from 'src/app/services/data.service';

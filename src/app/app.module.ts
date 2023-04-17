@@ -15,6 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ResumeAddComponent } from './components/resume-add/resume-add.component';
 import { ResumeUpdateComponent } from './components/resume-update/resume-update.component';
+import { ResumeAddWorkComponent } from './components/resume-add-work/resume-add-work.component';
+import { ResumeAddSkillsComponent } from './components/resume-add-skills/resume-add-skills.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ResumeUpdateComponent } from './components/resume-update/resume-update.
     LoginComponent,
     PortfolioComponent,
     ResumeAddComponent,
-    ResumeUpdateComponent
+    ResumeUpdateComponent,
+    ResumeAddWorkComponent,
+    ResumeAddSkillsComponent
   ],
   imports: [
     BrowserModule,

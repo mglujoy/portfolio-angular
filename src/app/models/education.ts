@@ -1,6 +1,6 @@
 export class Education {
 
-    id: Number | undefined;
+    id: number;
     duration: String | undefined;
     institution: String | undefined;
     name: String | undefined;
