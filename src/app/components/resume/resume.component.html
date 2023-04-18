@@ -1,50 +1,51 @@
 <section>
     <div class="container">
-      <div>        
-        <div>
-          <h2>Education</h2>
-          <button class="btn btn-dark btn-sm" routerLink="resume-add" routerLinkActive="active">Add New Education</button>
-        </div> 
-        <table class="table">
-          <thead class="table">
-            <tr>
-              <th>Duration</th>
-              <th>Institution</th>
-              <th>Degree</th>
-            </tr>
-          </thead>
-          <tbody *ngFor = "let edu of education">
-            <th>{{edu.duration}}</th>
-            <th>{{edu.institution}}</th>
-            <th>{{edu.name}}</th>
-          </tbody>
-          <!--
-          <button (click)= "updateEducation(education.id)" class="btn btn-info">Edit</button>
-          <button (click)= "deleteEducation(education.id)" class="btn btn-info" style="margin-left: 10px;">Delete</button>
-           -->
-        </table>
-        <div>
-          <h2>Work Experience</h2>
-          <button class="btn btn-dark btn-sm" routerLink="resume-add-work" routerLinkActive="active">Add New Work Experience</button>
-        </div> 
-        <table class="table">
-          <thead class="table">
-            <tr>
-              <th>Duration</th>
-              <th>Institution</th>
-              <th>Position</th>
-            </tr>
-          </thead>
-          <tbody *ngFor = "let w of work">
-            <th>{{w.duration}}</th>
-            <th>{{w.institution}}</th>
-            <th>{{w.name}}</th>
-          </tbody>
-          <!--
-          <button (click)= "deleteWork(work.id)" class="btn btn-info" style="margin-left: 10px;">Delete</button>
-           -->
-        </table>
-        
+      <div class="row">        
+        <div class="col-sm-6">
+          <div>
+            <h2>Education</h2>
+            <button class="btn btn-dark btn-sm" routerLink="resume-add" routerLinkActive="active">Add New Education</button>
+          </div> 
+          <table class="table">
+            <thead class="table">
+              <tr>
+                <th>Duration</th>
+                <th>Institution</th>
+                <th>Degree</th>
+              </tr>
+            </thead>
+            <tbody *ngFor = "let edu of education">
+              <th>{{edu.duration}}</th>
+              <th>{{edu.institution}}</th>
+              <th>{{edu.name}}</th>
+              <button (click)= "deleteEducation(edu.id)" class="btn btn-sm btn-dark" style="margin-left: 10px;">Delete</button>
+              <!--
+              <button (click)= "updateEducation(edu.id)" class="btn btn-sm btn-dark" style="margin-left: 10px;">Update</button>
+              -->
+            </tbody>
+          </table>
+        </div>
+        <div  class="col-sm-6">
+          <div>
+            <h2>Work Experience</h2>
+            <button class="btn btn-dark btn-sm" routerLink="resume-add-work" routerLinkActive="active">Add New Work Experience</button>
+          </div> 
+          <table class="table">
+            <thead class="table">
+              <tr>
+                <th>Duration</th>
+                <th>Institution</th>
+                <th>Position</th>
+              </tr>
+            </thead>
+            <tbody *ngFor = "let w of work">
+              <th>{{w.duration}}</th>
+              <th>{{w.institution}}</th>
+              <th>{{w.name}}</th>
+              <button (click)= "deleteWork(w.id)" class="btn btn-sm btn-dark" style="margin-left: 10px;">Delete</button>
+            </tbody>
+          </table>  
+        </div>
         <div>
           <h2>My Skills</h2>
           <button class="btn btn-dark btn-sm" routerLink="resume-add-skills" routerLinkActive="active">Add New Skill</button>
@@ -60,6 +61,7 @@
             <th>{{skill.name}}</th>
             <th>{{skill.progress}}%</th>
             <th><progress max="100"><span>{{skill.progress}}</span>%</progress></th>
+            <button (click)= "deleteSkill(skill.id)" class="btn btn-sm btn-dark" style="margin-left: 10px;">Delete</button>            
           </tbody>
           <div class="progress" style="height: 20px; width: 75%;">
             <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>

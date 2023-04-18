@@ -92,4 +92,8 @@ export class DataService {
   saveSkills(skills: Skills) : Observable<Object> {
     return this.http.post(this.crudUrlS, skills);
   }
+  deleteSkill(id: number) : Observable<Object>{
+    return this.http.delete<Skills>(`${this.crudUrlS}/${id}`);
+  }
+
  }

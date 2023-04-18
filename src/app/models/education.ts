@@ -1,7 +1,7 @@
 export class Education {
 
     id: number;
-    duration: String | undefined;
+    duration: String;
     institution: String | undefined;
     name: String | undefined;
 

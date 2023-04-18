@@ -61,7 +61,7 @@ export class ResumeComponent implements OnInit, OnDestroy {
   }
   deleteEducation(id: number) {
     this.dataService.deleteEducation(id).subscribe(data =>
-      {
+      {this.getEducation();
         console.log(data);
       }, err => {
         console.log("Error", err);
@@ -79,7 +79,7 @@ export class ResumeComponent implements OnInit, OnDestroy {
   }
   deleteWork(id: number) {
     this.dataService.deleteWork(id).subscribe(data =>
-      {
+      {this.getEducation();
         console.log(data);
       }, err => {
         console.log("Error", err);
@@ -94,6 +94,13 @@ export class ResumeComponent implements OnInit, OnDestroy {
     }, err => {
       console.log("Error", err);
     }); 
+  }  
+  deleteSkill(id: number) {
+    this.dataService.deleteSkill(id).subscribe(data =>
+      {this.getEducation();
+        console.log(data);
+      }, err => {
+        console.log("Error", err);
+      });
   }
-  
 }
