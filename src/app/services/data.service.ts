@@ -1,10 +1,12 @@
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SecurityService } from './security.service';
-import { Observable } from 'rxjs';
+import { Observable, ObservedValueOf } from 'rxjs';
 import { Education } from '../models/education';
 import { Work } from '../models/work';
 import { Skills } from '../models/skills';
+import { Home } from '../models/home';
+import { About } from '../models/about';
 
 @Injectable({
   providedIn: 'root'
@@ -87,6 +89,12 @@ export class DataService {
   deleteWork(id: number) : Observable<Object>{
     return this.http.delete<Work>(`${this.crudUrlW}/${id}`);
   }
+  getWork(id: number, work: Work) : Observable<Object> {
+    return this.http.get<Work>(`${this.crudUrlW}/${id}`);
+  }
+  putWork(id: number, work: Work) : Observable<Object> {
+    return this.http.put<Work>(`${this.crudUrlW}/${id}`, work);
+  }
 
   private crudUrlS = 'http://localhost:8081/api/v1/skills';
   saveSkills(skills: Skills) : Observable<Object> {
@@ -95,5 +103,24 @@ export class DataService {
   deleteSkill(id: number) : Observable<Object>{
     return this.http.delete<Skills>(`${this.crudUrlS}/${id}`);
   }
-
+  getSkills(id: number, skills: Skills) : Observable<Object> {
+    return this.http.get<Skills>(`${this.crudUrlS}/${id}`);
+  }
+  putSkills(id: number, skills: Skills) : Observable<Object> {
+    return this.http.put<Skills>(`${this.crudUrlS}/${id}`, skills);
+  }
+  private crudUrlH = 'http://localhost:8081/api/v1/home';
+  getHome(id: number, home: Home) : Observable<Object> {
+    return this.http.get<Home>(`${this.crudUrlH}/${id}`);
+  }
+  putHome(id: number, home: Home) : Observable<Object> {
+    return this.http.put<Home>(`${this.crudUrlH}/${id}`, home);
+  }
+  private crudUrlA = 'http://localhost:8081/api/v1/about';
+  getAbout(id: number, about: About) : Observable<Object> {
+    return this.http.get<About>(`${this.crudUrlA}/${id}`);
+  }
+  putAbout(id: number, about: About) : Observable<Object> {
+    return this.http.put<About>(`${this.crudUrlA}/${id}`, about);
+  }
  }

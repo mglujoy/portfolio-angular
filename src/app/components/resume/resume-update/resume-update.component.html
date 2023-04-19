@@ -5,6 +5,14 @@
         </h3>
         <form (ngSubmit)="onSubmit()">
             <div class="form-group">
+                <label>Id: </label>
+                <input type="text"
+                class="form-control"
+                id="duration"
+                [(ngModel)] = "education.id"
+                name = "id">
+            </div>
+            <div class="form-group">
                 <label>Duration: </label>
                 <input type="text"
                 class="form-control"

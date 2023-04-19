@@ -8,22 +8,22 @@ header ul {
 }
 
 header ul li {
-    padding: 0 10px;
+    padding: 0 5px;
 }
-header ul li span:first-child {
-    padding-left: 0;
-}
-header ul li span:last-child {
-    padding-right: 0;
-}
+
 header ul li a {
     color: black;
     font-weight: 500;    
     position: relative;
 }
 .apbanner {
-    background-color: #8d8d8d;
-    
+    background-color: #8d8d8d;    
     width: 150px;
     border-radius: 14px;
+}
+img {
+    width: 20px;
+}
+btn {
+    color: red;
 }

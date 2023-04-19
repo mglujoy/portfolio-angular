@@ -30,27 +30,7 @@
   padding-left: 10px;
   padding-bottom: 15px;
 }
-#body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-#nav {
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;        
-  list-style: none;    
-  border-bottom: solid 2px black;
-  margin-right: 5px;
-  font-size: x-large;
-  background-color: blanchedalmond;
-}
+
 a {
   margin-right: 2px;
   padding: 1px;

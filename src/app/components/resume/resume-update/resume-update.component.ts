@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Education } from 'src/app/models/education';
 import { DataService } from 'src/app/services/data.service';
@@ -9,12 +9,21 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './resume-update.component.html',
   styleUrls: ['./resume-update.component.css']
 })
-export class ResumeUpdateComponent {
+export class ResumeUpdateComponent implements OnInit {
   subRef$: Subscription | undefined;
-
+  id: number;
   education: Education = new Education();
   
-  constructor(private dataService: DataService, private router:Router) {
+  constructor(
+    private route: ActivatedRoute,
+    private dataService: DataService, 
+    private router:Router) {
+  }
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
+    this.education = new Education();
+    this.dataService.getEducation(this.id, this.education).subscribe((data: any) => this.education = data);
+    
   }
 
   updateEducation() {

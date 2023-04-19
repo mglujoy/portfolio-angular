@@ -30,8 +30,7 @@
   
   .form-input {
     padding: 13px 20px;
-    border-radius: 14px;
-    
+    border-radius: 10px;    
     outline: none;
   }
   
@@ -44,16 +43,5 @@
   }
   
   
-  .form-btn {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 20px;
-    border-radius: 14px;
-    text-transform: capitalize;
-    z-index: 1;
-  }
+
   

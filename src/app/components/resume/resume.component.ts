@@ -16,7 +16,6 @@ import { Skills } from 'src/app/models/skills';
 export class ResumeComponent implements OnInit, OnDestroy {
   subRef$: Subscription;
   education: Education[];
-  ieducation: IEducation;
   work: Work[];
   skills: Skills[];
   IsAuthenticated = false;
@@ -79,11 +78,14 @@ export class ResumeComponent implements OnInit, OnDestroy {
   }
   deleteWork(id: number) {
     this.dataService.deleteWork(id).subscribe(data =>
-      {this.getEducation();
+      {this.getWork();
         console.log(data);
       }, err => {
         console.log("Error", err);
       });
+  }
+  updateWork(id: number) {
+    this.router.navigate(['resume-update-work', id]);
   }
 
   private getSkills() {
@@ -97,10 +99,13 @@ export class ResumeComponent implements OnInit, OnDestroy {
   }  
   deleteSkill(id: number) {
     this.dataService.deleteSkill(id).subscribe(data =>
-      {this.getEducation();
+      {this.getSkills();
         console.log(data);
       }, err => {
         console.log("Error", err);
       });
+  }
+  updateSkills(id: number) {
+    this.router.navigate(['resume-update-skills', id]);
   }
 }

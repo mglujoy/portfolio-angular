@@ -1,12 +1,16 @@
 <section>
     <div class="container">
-        <div class="row">
+        <div *ngFor = "let a of about" class="row">
             <div class="col-sm-7">
                 <div class="about">
                   <div class="aboutHeader">
                     <header>
-                      <h2 class="h2 article-title">About me</h2>
-                    </header>     
+                      <h2>About me</h2>
+                    </header>    
+                    <div>
+                      <button *ngIf="IsAuthenticated" (click)= "updateAbout(a.id)" class="btn btn-lg btn-secondary" style="margin-left: 10px;"><img src="/assets/img/pencil.svg" alt=""></button>
+                    </div> 
+                    <!--
                     <div *ngIf="IsAuthenticated">
                       <div *ngIf = "!aboutInfo.isEdit" class="p-flex">
                           <div class="service-icon-box">
@@ -24,14 +28,14 @@
                           <button type="button" class="btn btn-dark btn-sm" (click)="aboutInfo.isEdit = false">Cancel</button>
                         </div>
                       </div>
-                    </div>
+                    </div>-->
                   </div>                       
                       <section class="about-text">
                         <div *ngIf = "aboutInfo.isEdit">
                           <input type="text" [(ngModel)]= "aboutInfo.aboutme" class= "form-control">
                         </div>
                         <div *ngIf = "!aboutInfo.isEdit">
-                          {{aboutInfo.aboutme}}
+                          {{a.about}}
                         </div>                                      
                       </section>
                       <p>_______________________________</p>                     
@@ -52,7 +56,7 @@
                               <img src="../../assets/img/gateway-security-svgrepo-com.svg" alt="design icon" width="40">
                             </div>              
                             <div class="service-content-box">
-                              <h4 class="h4 service-item-title">{{aboutInfo.whatimdoing.item1}}</h4>              
+                              <h4 class="h4 service-item-title">{{a.item1}}</h4>              
                               <p class="service-item-text"></p>
                             </div>           
                           </li>              
@@ -61,7 +65,7 @@
                               <img src="../../assets/img/web-development-svgrepo-com.svg" alt="Web development icon" width="40">
                             </div>              
                             <div class="service-content-box">
-                              <h4 class="h4 service-item-title">{{aboutInfo.whatimdoing.item2}}</h4>              
+                              <h4 class="h4 service-item-title">{{a.item2}}</h4>              
                               <p class="service-item-text"></p>
                             </div>   
                           </li>              
@@ -70,7 +74,7 @@
                               <img src="../../assets/img/linux-svgrepo-com.svg" alt="linux app icon" width="40">
                             </div>              
                             <div class="service-content-box">
-                              <h4 class="h4 service-item-title">{{aboutInfo.whatimdoing.item3}}</h4>              
+                              <h4 class="h4 service-item-title">{{a.item3}}</h4>              
                               <p class="service-item-text"></p>
                             </div>             
                           </li>              
@@ -79,7 +83,7 @@
                               <img src="../../assets/img/networking-share-svgrepo-com.svg" alt="networking icon" width="40">
                             </div>              
                             <div class="service-content-box">
-                              <h4 class="h4 service-item-title">{{aboutInfo.whatimdoing.item4}}</h4>              
+                              <h4 class="h4 service-item-title">{{a.item4}}</h4>              
                               <p class="service-item-text"></p>
                             </div>                                       
                           </li>    

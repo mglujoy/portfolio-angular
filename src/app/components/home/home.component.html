@@ -6,12 +6,14 @@
             </div>            
             <div class="col-sm-7">
                 <span>
-                    <aside class="sidebar">
-                        <div class="sidebar-info">                                            
+                    <aside *ngFor = "let h of home" class="sidebar">
+                      <div>
+                        <button *ngIf="IsAuthenticated" (click)= "updateHome(h.id)" class="btn btn-sm btn-secondary" style="margin-left: 10px;"><img src="/assets/img/pencil.svg" alt=""></button>
+                      </div>
+                        <div class="sidebar-info">       
                           <div class="info-content">
-                            <h1 class="name" title="Maximiliano Glujoy">{{homeInfo.name}}</h1>                  
-                            <p class="title">{{homeInfo.description}}</p>
-                            <p class="title"></p>
+                            <h1 class="name" title="Maximiliano Glujoy">{{h.name}}</h1>                  
+                            <p class="title">{{h.description}}</p>
                           </div>                 
                         </div>                  
                         <div class="sidebar-info_more">                  
@@ -23,7 +25,7 @@
                               </div>                  
                               <div class="contact-info">
                                 <p class="contact-title"></p>                  
-                                <a href="mailto:mglujoy@gmail.com" class="contact-link">{{homeInfo.email}}</a>
+                                <a href="mailto:mglujoy@gmail.com" class="contact-link">{{h.email}}</a>
                               </div>                  
                             </li>                  
                             <li class="contact-item">                  
@@ -32,7 +34,7 @@
                               </div>                  
                               <div class="contact-info">
                                 <p class="contact-title"></p>                  
-                                <a href="tel:+5491164364214" class="contact-link">{{homeInfo.phone}}</a>
+                                <a href="tel:+5491164364214" class="contact-link">{{h.phone}}</a>
                               </div>                  
                             </li>                  
                             <li class="contact-item">                  
@@ -41,7 +43,7 @@
                               </div>                  
                               <div class="contact-info">
                                 <p class="contact-title"></p>                  
-                                <time class="contact-link" datetime="1986-12-29">{{homeInfo.birthDate}}</time>
+                                <time class="contact-link" datetime="1986-12-29">{{h.birth}}</time>
                               </div>                  
                             </li>                  
                             <li class="contact-item">                  
@@ -50,29 +52,29 @@
                               </div>                  
                               <div class="contact-info">
                                 <p class="contact-title"></p>                  
-                                <address class="contact-link">{{homeInfo.location}}</address>
+                                <address class="contact-link">{{h.location}}</address>
                               </div>                  
                             </li>                  
                           </ul>                  
                           <div class="separator"></div>                  
                           <ul class="social-list">                  
                             <li class="social-item">
-                              <a href= {{homeInfo.linkedin}} class="social-link"> 
+                              <a href= {{h.linkedin}} class="social-link"> 
                                 <img src="../../assets/img/linkedin-svgrepo-com.svg" alt="">
                               </a>
                             </li>                  
                             <li class="social-item">
-                              <a href= {{homeInfo.github}} class="social-link"> 
+                              <a href= {{h.github}} class="social-link"> 
                                 <img src="../../assets/img/github-svgrepo-com.svg" alt="">
                               </a>
                             </li>                  
                             <li class="social-item">
-                              <a href= {{homeInfo.instagram}} class="social-link"> 
+                              <a href= {{h.instagram}} class="social-link"> 
                                 <img src="../../assets/img/instagram-svgrepo-com.svg" alt="">
                               </a>
                             </li>
                             <li class="social-item">
-                              <a href= {{homeInfo.twitter}} class="social-link"> 
+                              <a href= {{h.twitter}} class="social-link"> 
                                 <img src="../../assets/img/twitter-svgrepo-com.svg" alt="">
                               </a>
                             </li>                                              
