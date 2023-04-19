@@ -8,10 +8,10 @@ import { PortfolioService } from '../../services/portfolio.service';
 })
 export class HeaderComponent {
 
-  constructor (private getData:PortfolioService) {}
+  constructor () {}
 
   ngOnInit(): void {
-    this.getData.getData();
+
   }
 
 }

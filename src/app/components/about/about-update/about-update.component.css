@@ -1,0 +1,7 @@
+textarea.form-input {
+    min-height: 100px;
+    height: 120px;
+    max-height: 200px;
+    resize: vertical;
+    margin-bottom: 25px;
+  }

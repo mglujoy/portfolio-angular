@@ -1,10 +1,10 @@
 {
-    "aboutme" : "Clinical Pharmacist looking for a career change. Currently studying Cyber Security in Universidad de San Isidro and Web Development in Argentina Programa. In progress...",
+    "aboutme" : "I am a Clinical Pharmacist looking for a career change. Currently studying CyberSecurity in Universidad de San Isidro and Web Development in Argentina Programa. I have also studied Web Development in FreeCodeCamp, and Cybersecurity (Ethical Hacking) through the HackTheBox and TryHackMe platforms. I believe I hold general knowledge in IT, inlcuding: Hardware management, OS booting (Windows & Linux), Network Management, Virtual Machine implementation and also CryptoMining.",
     "whatimdoing" : {
         "item1" : "Cybersecurity",
         "item2" : "Web Development",
         "item3" : "Linux",
-        "item4" : "Networking"
+        "item4" : "Networking & Data Analysis"
     },
     "isEdit" : false
 }

@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="col-md-6 offset-md-3">
+        <h3 class="text-center">
+            Edit Home
+        </h3>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Id: </label>
+                <input type="text"
+                class="form-control"
+                id="id"
+                [(ngModel)] = "home.id"
+                name = "id">
+            </div>
+            <div class="form-group">
+                <label>Name: </label>
+                <input type="text"
+                class="form-control"
+                id="name"
+                [(ngModel)] = "home.name"
+                name = "name">
+            </div>
+            <div class="form-group">
+                <label>Description: </label>
+                <input type="text"
+                class="form-control"
+                id="description"
+                [(ngModel)] = "home.description"
+                name = "description">
+            </div>
+            <div class="form-group">
+                <label>Email: </label>
+                <input type="text"
+                class="form-control"
+                id="name"
+                [(ngModel)] = "home.email"
+                name = "email">
+            </div>
+            <div class="form-group">
+                <label>Phone: </label>
+                <input type="text"
+                class="form-control"
+                id="phone"
+                [(ngModel)] = "home.phone"
+                name = "phone">
+            </div>
+            <div class="form-group">
+                <label>Birth: </label>
+                <input type="text"
+                class="form-control"
+                id="birth"
+                [(ngModel)] = "home.birth"
+                name = "birth">
+            </div>
+            <div class="form-group">
+                <label>Location: </label>
+                <input type="text"
+                class="form-control"
+                id="location"
+                [(ngModel)] = "home.location"
+                name = "location">
+            </div>
+            <div class="form-group">
+                <label>Linkedin: </label>
+                <input type="text"
+                class="form-control"
+                id="linkedin"
+                [(ngModel)] = "home.linkedin"
+                name = "linkedin">
+            </div>
+            <div class="form-group">
+                <label>GitHub: </label>
+                <input type="text"
+                class="form-control"
+                id="github"
+                [(ngModel)] = "home.github"
+                name = "github">
+            </div>
+            <div class="form-group">
+                <label>Instagram: </label>
+                <input type="text"
+                class="form-control"
+                id="instagram"
+                [(ngModel)] = "home.instagram"
+                name = "instagram">
+            </div>
+            <div class="form-group">
+                <label>Twitter: </label>
+                <input type="text"
+                class="form-control"
+                id="twitter"
+                [(ngModel)] = "home.twitter"
+                name = "twitter">
+            </div>
+            <button class="btn btn-dark">Save</button>
+        </form>
+    </div>
+</div>

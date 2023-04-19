@@ -1,6 +1,6 @@
 export interface IEducation {
 
-    id: Number;
+    id: number;
     duration: String;
     institution: String;
     name: String;

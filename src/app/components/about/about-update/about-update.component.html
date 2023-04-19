@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="col-md-6 offset-md-3">
+        <h3 class="text-center">
+            Edit About
+        </h3>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>About: </label>
+                <textarea class="form-input" type="text"
+                class="form-control"
+                id="id"
+                [(ngModel)] = "about.about"
+                name = "about" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Id: </label>
+                <input type="text"
+                class="form-control"
+                id="id"
+                [(ngModel)] = "about.id"
+                name = "id">
+            </div>
+            <div class="form-group">
+                <label>Item 1: </label>
+                <input type="text"
+                class="form-control"
+                id="intem1"
+                [(ngModel)] = "about.item1"
+                name = "item1">
+            </div>
+            <div class="form-group">
+                <label>Item2: </label>
+                <input type="text"
+                class="form-control"
+                id="item2"
+                [(ngModel)] = "about.item2"
+                name = "item2">
+            </div>
+            <div class="form-group">
+                <label>Item 3: </label>
+                <input type="text"
+                class="form-control"
+                id="item3"
+                [(ngModel)] = "about.item3"
+                name = "item3">
+            </div>
+            <div class="form-group">
+                <label>Item 4: </label>
+                <input type="text"
+                class="form-control"
+                id="item4"
+                [(ngModel)] = "about.item4"
+                name = "item4">
+            </div>            
+            <button class="btn btn-dark">Save</button>
+        </form>
+    </div>
+</div>

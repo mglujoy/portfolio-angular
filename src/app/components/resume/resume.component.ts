@@ -4,6 +4,9 @@ import { Subscription } from 'rxjs';
 import { SecurityService } from 'src/app/services/security.service';
 import { Education } from 'src/app/models/education';
 import { Router } from '@angular/router';
+import { IEducation } from 'src/app/models/ieducation';
+import { Work } from 'src/app/models/work';
+import { Skills } from 'src/app/models/skills';
 
 @Component({
   selector: 'app-resume',
@@ -11,8 +14,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent implements OnInit, OnDestroy {
-  subRef$: Subscription | undefined;
-  education: Education[] | undefined;
+  subRef$: Subscription;
+  education: Education[];
+  work: Work[];
+  skills: Skills[];
   IsAuthenticated = false;
   private subsAuth$: Subscription;
   
@@ -36,6 +41,8 @@ export class ResumeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void { 
     this.getEducation();
+    this.getWork();
+    this.getSkills();
   }
 
   private getEducation() {
@@ -53,9 +60,52 @@ export class ResumeComponent implements OnInit, OnDestroy {
   }
   deleteEducation(id: number) {
     this.dataService.deleteEducation(id).subscribe(data =>
-      {
+      {this.getEducation();
         console.log(data);
-        this.getEducation();
-      })
+      }, err => {
+        console.log("Error", err);
+      });
+  }
+
+  private getWork() {
+    const url = 'http://localhost:8081/api/v1/work';
+    this.subRef$ = this.dataService.get<Work[]>(
+      url).subscribe((res: any) => {
+      this.work = res.body;
+    }, err => {
+      console.log("Error", err);
+    }); 
+  }
+  deleteWork(id: number) {
+    this.dataService.deleteWork(id).subscribe(data =>
+      {this.getWork();
+        console.log(data);
+      }, err => {
+        console.log("Error", err);
+      });
+  }
+  updateWork(id: number) {
+    this.router.navigate(['resume-update-work', id]);
+  }
+
+  private getSkills() {
+    const url = 'http://localhost:8081/api/v1/skills';
+    this.subRef$ = this.dataService.get<Skills[]>(
+      url).subscribe((res: any) => {
+      this.skills = res.body;
+    }, err => {
+      console.log("Error", err);
+    }); 
+  }  
+  deleteSkill(id: number) {
+    this.dataService.deleteSkill(id).subscribe(data =>
+      {this.getSkills();
+        console.log(data);
+      }, err => {
+        console.log("Error", err);
+      });
+  }
+  updateSkills(id: number) {
+    this.router.navigate(['resume-update-skills', id]);
   }
 }
