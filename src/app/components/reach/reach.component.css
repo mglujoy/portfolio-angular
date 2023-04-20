@@ -16,32 +16,17 @@
     border: none;
     filter: grayscale(1) invert(1);
   }
-  
-  .contact-form { margin-bottom: 10px; }
-  
-  .form-title { margin-bottom: 20px; }
-  
-  .input-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    margin-bottom: 25px;
-  }
-  
-  .form-input {
-    padding: 13px 20px;
-    border-radius: 10px;    
-    outline: none;
-  }
-  
-  textarea.form-input {
+ 
+  textarea {
     min-height: 100px;
     height: 120px;
     max-height: 200px;
     resize: vertical;
     margin-bottom: 25px;
   }
-  
+button {
+  margin-top: 10px;
+}  
   
 
   
