@@ -16,6 +16,7 @@ button {
     border: none;
     text-align: left;
     cursor: pointer;
+    margin-top: 5px;
 }
 input, textarea {
     display: block;
