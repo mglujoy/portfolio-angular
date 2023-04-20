@@ -1,33 +1,73 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-7">
+            <div class="col-sm-6">
                 <article class="contact">
                     <header>
                       <h2 class="h2 article-title">¡Leave me a message!</h2>
                     </header>            
                     <section class="contact-form">                
                       <h3 class="h3 form-title"></h3>                
-                      <form action="#" class="form">
-                        <div class="input-wrapper">
-                          <input type="text" name="fullname" class="form-input" placeholder="Full name" required >            
-                          <input type="email" name="email" class="form-input" placeholder="Email address" required >                      
-                        </div>            
-                        <textarea name="message" class="form-input" placeholder="Your Message" required ></textarea>            
-                        <button class="btn btn-dark btn-lg" type="submit" >                          
-                          <span>Send Message</span>
-                        </button>            
+                      <form action="#" (ngSubmit)="onSubmit()" class="form">
+                        <div class="form-group">
+                          <input type="text"
+                          class="form-control"
+                          id="name"
+                          [(ngModel)] = "newMessage.name"
+                          name = "name" 
+                          placeholder="Full name" required >            
+                        </div>
+                        <div class="form-group">
+                          <input type="email" 
+                          id="email"
+                          [(ngModel)] = "newMessage.email"
+                          name="email" 
+                          class="form-control" 
+                          placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                          <textarea name="message" 
+                          class="form-control" 
+                          id="message"
+                          [(ngModel)]="newMessage.message"
+                          name="message"
+                          placeholder="Your Message" required ></textarea>   
+                        </div>
+                        <button class="btn btn-dark">Send Message</button>            
                       </form>
                     </section>                
                   </article>                
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-6">
                 <section class="mapbox">
                     <figure>
                       <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d52538.599812736116!2d-58.4247936!3d-34.6126952!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1673381138093!5m2!1ses-419!2sar" width="600" height="850" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                      
                     </figure>
                   </section>                
             </div>
+        </div>
+        <div>
+          <button routerLink="../login" routerLinkActive="active" class="btn btn-danger btn-sm">
+            If you want to see the Messages, you need to Log In
+          </button>
+        </div>
+        <div class="container" *ngIf="IsAuthenticated">
+          <table class="table table-striped table-hover table-sm">
+            <thead class="">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody class="" *ngFor = "let m of reach">
+              <tr>
+                <td>{{m.name}}</td>
+                <td>{{m.email}}</td>
+                <td>{{m.message}}</td>     
+              </tr>
+            </tbody>
+          </table>
         </div>
     </div>
 </section>

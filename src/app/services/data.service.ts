@@ -7,6 +7,7 @@ import { Work } from '../models/work';
 import { Skills } from '../models/skills';
 import { Home } from '../models/home';
 import { About } from '../models/about';
+import { Reach } from '../models/reach';
 
 @Injectable({
   providedIn: 'root'
@@ -122,5 +123,9 @@ export class DataService {
   }
   putAbout(id: number, about: About) : Observable<Object> {
     return this.http.put<About>(`${this.crudUrlA}/${id}`, about);
+  }
+  private crudUrlR = 'http://localhost:8081/api/v1/reach';
+  saveReach(reach: Reach) : Observable<Object> {
+    return this.http.post(this.crudUrlR, reach);
   }
  }
