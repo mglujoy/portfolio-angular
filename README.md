@@ -1,3 +1,18 @@
+Final project for Argentina Programa 4.0
+
+Front-End: Angular
+Back-End: Spring Boot, 
+	Spring Security, 
+	JSON Web Token,
+	Brute Force Attack Stopper: 
+		AuthenticationFailureListener,
+		LoginAttemptService
+Back-End 2: CRUD, 
+	Full CRUD in "resume", 
+	All the content can be edited, with valid credentials.
+	"Reach" public form to leave messages on the DataBase.
+DataBase: MySQL
+
 # PortfolioAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.

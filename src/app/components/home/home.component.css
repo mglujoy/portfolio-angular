@@ -18,6 +18,11 @@
   padding-left: 7px;
   }
 
+.contact-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
 img {
   height: 25px;
   width: 25px;
