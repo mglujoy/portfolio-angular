@@ -1,6 +1,6 @@
 <section>
     <div class="container">
-        <div *ngFor = "let a of about" class="row">
+        <div class="row">
             <div class="col-sm-7">
                 <div class="about">
                   <div class="aboutHeader">
@@ -8,7 +8,7 @@
                       <h2>About me</h2>
                     </header>    
                     <div>
-                      <button *ngIf="IsAuthenticated" (click)= "updateAbout(a.id)" class="btn btn-lg btn-secondary" style="margin-left: 10px;"><img src="/assets/img/pencil.svg" alt=""></button>
+                      <button *ngIf="IsAuthenticated" class="btn btn-lg btn-secondary" style="margin-left: 10px;"><img src="/assets/img/pencil.svg" alt=""></button>
                     </div> 
                     <!--
                     <div *ngIf="IsAuthenticated">
@@ -35,7 +35,7 @@
                           <input type="text" [(ngModel)]= "aboutInfo.aboutme" class= "form-control">
                         </div>
                         <div *ngIf = "!aboutInfo.isEdit">
-                          {{a.about}}
+                          I am a Clinical Pharmacist looking for a career change. Currently studying CyberSecurity in Universidad de San Isidro and Web Development in Argentina Programa. I have also studied Web Development in FreeCodeCamp, and Cybersecurity (Ethical Hacking) through the HackTheBox and TryHackMe platforms. I believe I hold general knowledge in IT, inlcuding: Hardware management, OS booting (Windows & Linux), Network Management, Virtual Machine implementation and also CryptoMining.
                         </div>                                      
                       </section>
                       <p>_______________________________</p>                     
@@ -56,7 +56,7 @@
                               <img src="../../assets/img/gateway-security-svgrepo-com.svg" alt="design icon" width="40">
                             </div>              
                             <div class="service-content-box">
-                              <h4 class="h4 service-item-title">{{a.item1}}</h4>              
+                              <h4 class="h4 service-item-title">CyberSecurity</h4>              
                               <p class="service-item-text"></p>
                             </div>           
                           </li>              
@@ -65,7 +65,7 @@
                               <img src="../../assets/img/web-development-svgrepo-com.svg" alt="Web development icon" width="40">
                             </div>              
                             <div class="service-content-box">
-                              <h4 class="h4 service-item-title">{{a.item2}}</h4>              
+                              <h4 class="h4 service-item-title">Web Development</h4>              
                               <p class="service-item-text"></p>
                             </div>   
                           </li>              
@@ -74,7 +74,7 @@
                               <img src="../../assets/img/linux-svgrepo-com.svg" alt="linux app icon" width="40">
                             </div>              
                             <div class="service-content-box">
-                              <h4 class="h4 service-item-title">{{a.item3}}</h4>              
+                              <h4 class="h4 service-item-title">Linux</h4>              
                               <p class="service-item-text"></p>
                             </div>             
                           </li>              
@@ -83,7 +83,7 @@
                               <img src="../../assets/img/networking-share-svgrepo-com.svg" alt="networking icon" width="40">
                             </div>              
                             <div class="service-content-box">
-                              <h4 class="h4 service-item-title">{{a.item4}}</h4>              
+                              <h4 class="h4 service-item-title">Networking</h4>              
                               <p class="service-item-text"></p>
                             </div>                                       
                           </li>    
